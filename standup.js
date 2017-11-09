@@ -9,7 +9,7 @@ Trello.makeRequest('get', `/1/boards/${config.board_id}`, {
 	list_fields : 'id,name',
 })
 .then((board)=>{
-	const filterByListName = (listNames)=>{
+	const filterCardsByListName = (listNames)=>{
 		const result = listNames.map((listName)=>{
 			const list = board.lists.find((list)=>list.name == listName);
 			return board.cards.filter((card)=>card.idList == list.id);
@@ -17,8 +17,8 @@ Trello.makeRequest('get', `/1/boards/${config.board_id}`, {
 		return [].concat.apply([], result)
 	};
 	return {
-		today     : filterByListName(config.today_lists),
-		yesterday : filterByListName(config.yesterday_lists),
+		today     : filterCardsByListName(config.today_lists),
+		yesterday : filterCardsByListName(config.yesterday_lists),
 	}
 })
 .then((tasks)=>{
