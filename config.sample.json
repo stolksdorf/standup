@@ -1,0 +1,9 @@
+{
+	"auth" : {
+		"key" : "SECRET",
+		"token" : "SECRET"
+	},
+	"board_id" : "SECRET",
+	"yesterday_lists": ["Done Today"],
+	"today_lists": ["Current", "Today"]
+}

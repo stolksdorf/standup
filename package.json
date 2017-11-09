@@ -1,0 +1,23 @@
+{
+  "name": "standup",
+  "version": "1.0.0",
+  "description": "A small script using Trello to make a daily standup message",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./standup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stolksdorf/standup.git"
+  },
+  "author": "stolksdorf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stolksdorf/standup/issues"
+  },
+  "homepage": "https://github.com/stolksdorf/standup#readme",
+  "dependencies": {
+    "node-clipboard": "^1.2.0",
+    "trello": "^0.8.0"
+  }
+}
